@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repository Audit"
+  short_description: "Audit a repository before making changes"
+  default_prompt: "Use $repository-audit to map this repository's architecture, risks, commands, and verification evidence before proposing changes."
