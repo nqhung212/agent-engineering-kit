@@ -1,0 +1,23 @@
+version: 1
+
+workflow:
+  require_repository_audit: true
+  require_plan: true
+  require_completion_report: true
+
+architecture:
+  direct_api_calls_from_ui_hooks: forbidden
+  external_request_boundary:
+    - controller
+    - application-service
+
+verification:
+  use_repository_commands_only: true
+  require_changed_behavior_tests: true
+  report_missing_checks: true
+
+safety:
+  preserve_unrelated_changes: true
+  allow_secret_output: false
+  confirm_destructive_targets: true
+  allow_unverified_completion_claims: false
